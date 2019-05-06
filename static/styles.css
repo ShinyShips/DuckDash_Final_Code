@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background:#757575;
+}
+header {
+  padding: 20px 0;
+  background: #8A0808;
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+.container {
+  padding: 0px;
+  max-width: 960px;
+  margin: 0 auto;
+
+}
+.logo-box {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  float:left;
+  margin-right: 50px;
+
+}
+.logo-box a {
+  outline: none;
+  display: block;
+}
+.logo-box img {
+  display: block;
+  max-width: 60px;
+  max-height: 50px;
+}
+nav {
+  overflow: hidden;
+
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+nav li {
+  display: inline-block;
+  margin-left: 25px;
+  height: 5px;
+  line-height: 5px;
+  transition: .5s linear;
+}
+nav a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+}
+nav a:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  background: #868686;
+  transition: width .5s linear;
+}
+nav a:hover:after {width: 100%;}
+
+/*Slider starts */
+
+@media screen and (max-width: 660px) {
+  header {text-align: center;}
+  .logo-box {
+    float: none;
+    display: inline-block;
+    margin: 0 0 16px 0;
+  }
+  ul {float: none;}
+  nav li:first-of-type {margin-left: 0;}
+}
+@media screen and (max-width: 550px) {
+nav {overflow: visible;}
+nav li {
+  display: block;
+  margin: 0;
+  height: 40px;
+  line-height: 40px;
+}
+nav li:hover {background: rgba(0,0,0,.1);}
+nav a:after {content: none;}
+}
+
+slider {
+  display: block;
+  width: 100%;
+  height: 175px;
+  background-color: #1f1f1f;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+
+slider > * {
+  position: absolute;
+  display: block;
+  width:100%;
+  height:100%;
+  background: #1f1f1f;
+  animation: slide 12s infinite;
+  overflow: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+
+slide:nth-child(1){
+  left:0%;
+  animation-delay: -1s;
+  background-image: url(http://www.sadco-egypt.com/images/layer-gallery/fw7.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+slide:nth-child(2){
+  animation-delay: 2s;
+  background-image: url(http://www.sadco-egypt.com/images/layer-gallery/fw9.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+slide:nth-child(3){
+  animation-delay: 5s;
+  background-image: url(https://www.alexchef.co.uk/wp-content/uploads/2018/01/corpcatering-1920x420.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+slide:nth-child(4){
+  animation-delay: 8s;
+  background-image: url(http://www.sulaymaniahfoodexpo.com/images/banner1.jpg);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+@keyframes slide{
+  0%{left: 100%; width:100%;}
+  5%{left:0%;}
+  25%{left:0%;}
+  30%{left: -100%; width: 100%;}
+  30.0001%{left: -100%; width: 0%;}
+  100%{left: 100%; width: 0%;}
+
+}
+
+
+form {
+  text-align: center
+}
+
+
+

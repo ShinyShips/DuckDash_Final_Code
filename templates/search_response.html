@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <div class="container" id="myHeader">
+<head>
+    <meta charset="UTF-8"> <meta name=viewport" content="width=device-width, initial-scale-1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+          rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+
+    <div class="logo-box">
+        <a href="/">
+            <img src="http://www.stevens.edu/news/newspoints/brand-logos/Stevens-ducks-mascott-Attila.png">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+        </ul>
+    </nav>
+    <style >
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+    background-color: #424040;
+}
+
+tr:nth-child(even) {
+  background-color: #b4b4b4;
+}
+    </style>
+</head>
+</div>
+</header>
+<body>
+    <form action="/finer_search" method="post">
+    <table align="center">
+        <thead>
+            <tr>
+              <th scope='col'>Info</th>
+              <th scope="col">Name</th>
+              <th scope="col">Hours</th>
+              <th scope="col">Address</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Open</th>
+              <th scope="col">Rating (Out of 5)</th>
+              <th scope="col">Price</th>
+
+            </tr>
+    <tbody>
+        {% if result|length != 0%}
+        {% for name in result %}
+            <tr>
+                <td><button type="submit" name="info" value={{name[1]}}>Info</button></td>
+                <td> {{ name[0] }}</td>
+                <td> {{ name[2] }} </td>
+                <td> {{ name[3] }} </td>
+                <td> {{ name[4] }} </td>
+                <td> {{ name[5] }} </td>
+                <td> {{ name[6] }} </td>
+                <td> {{ name[7] }} </td>
+
+            </tr>
+        {% endfor %}
+        {% endif %}
+
+    </tbody>
+    </table>
+    </form>
+
+</body>
+
+</html>
+

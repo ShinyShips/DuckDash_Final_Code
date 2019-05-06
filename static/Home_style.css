@@ -1,0 +1,47 @@
+.rectangle {
+  position: absolute;
+  top: 250px;
+  right: 100px;
+  width: 700px;
+  height: 500px;
+  background-color: #BDBDBD;
+  border: 2px solid #000;
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+
+.rectangle2 {
+  position: absolute;
+  top: 75px;
+  left: 10px;
+  right: 10px;
+  height: 400px;
+  background-color: #F5F5F5;
+  border: 2px solid #000;
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+
+.form1 {
+  position: absolute;
+  top: 10px;
+  right: 300px;
+}
+
+.form2 {
+  position: absolute;
+  top: 10px;
+  left: 380px;
+}
+
+.price{
+  position: static;
+  float: left;
+}
+
+.hoboken{
+  width: 500px;
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  border: 2px solid #000;
+  box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}

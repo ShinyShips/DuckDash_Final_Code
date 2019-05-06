@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <div class="container" id="myHeader">
+<head>
+    <meta charset="UTF-8"> <meta name=viewport" content="width=device-width, initial-scale-1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+          rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/finer.css">
+
+    <div class="logo-box">
+        <a href="/">
+            <img src="http://www.stevens.edu/news/newspoints/brand-logos/Stevens-ducks-mascott-Attila.png">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+        </ul>
+    </nav>
+    <style >
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #8A0808;
+}
+    </style>
+</head>
+</div>
+</header>
+<body background="https://www.stevens.edu/sites/stevens_edu/files/styles/news_detail/public/Campus%20Tour%20Screenshot%20.jpg?itok=yPjedYoR">
+
+    <table class="info" align="center">
+        <thead>
+            <tr>
+{#              <th scope="col">Name</th>#}
+{#              <th scope="col">Hours</th>#}
+{#              <th scope="col">Address</th>#}
+{#              <th scope="col">Phone Number</th>#}
+{#              <th scope="col">Open</th>#}
+{#              <th scope="col">Rating (Out of 5)</th>#}
+{#              <th scope="col">Price</th>#}
+{#              <th scope="col">Review</th>#}
+{#              <th scope="col">Yelp URL</th>#}
+{#              <th scope="col">Place Image</th>#}
+            </tr>
+    <tbody>
+        {% if result|length != 0%}
+        {% for name in result %}
+            <tr>
+                <p class="restName"><strong> {{ name[0] }} </strong></p>
+                <div class="contain">
+                    <div class="subcontain1">
+                        <p><strong><u> Business Details: </u></strong></p>
+                        <p class="restHours"><i> Hours:</i> {{ name[1] }} </p>
+                        <p class="restAddress"><i> Address:</i> {{ name[2] }} </p>
+                        <p class="restPhone"><i> Phone:</i> {{ name[3] }} </p>
+                        <p class="restOpen"><i> Open Now?:</i> {{ name[4] }} </p>
+                        <p class="restRating"><i> Rating:</i> {{ name[5] }} </p>
+                        <p class="restPrice"><i> Price:</i> {{ name[6] }} </p>
+                        <p class="restYelp"> <button
+onclick="window.location.href='{{ name[8] }}';">Click here to go to
+Yelp </p>
+                    </div>
+                </div>
+                <div class="review">
+                    <p font-size=24><strong><u>Review:</u></strong></p>
+                    <p>{{ name[7] }}</p>
+                </div>
+
+                <img class="placeImg" src="{{ name[9] }}" height="400"
+width="400">
+{#                <td> {{ name[0] }} </td>#}
+{#                <td> {{ name[1] }} </td>#}
+{#                <td> {{ name[2] }} </td>#}
+{#                <td> {{ name[3] }} </td>#}
+{#                <td> {{ name[4] }} </td>#}
+{#                <td> {{ name[5] }} </td>#}
+{#                <td> {{ name[6] }} </td>#}
+{#                <td> {{ name[7] }} </td>#}
+{#                <td> <button onclick="window.location.href='{{ name[8] }}';">Click here to go to Yelp </button></td>#}
+{#                <td> <img src="{{ name[9] }}" height="60" width="60"> </td>#}
+            </tr>
+        {% endfor %}
+        {% endif %}
+
+    </tbody>
+    </table>
+
+</body>
+
+</html>

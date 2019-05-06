@@ -1,0 +1,86 @@
+.contain{
+    position: absolute;
+    top:250px;
+    left: 50%;
+    height: 200px;
+    width: 20%;
+    background-color: #BDBDBD;
+    border: 2px solid #000;
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+
+.placeImg {
+    position: absolute;
+    top: 130px;
+    left: 20%;
+    border: 2px solid #000;
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+
+.info{
+    position:absolute;
+    top: 440px;
+    left: 5px;
+    width:10%;
+    background: white;
+}
+
+.restName{
+    font-size: 36px;
+    position: absolute;
+    top: 50px;
+    left: 20%;
+}
+
+.restRating{
+    position: absolute;
+    top: 35px;
+    left: 5px;
+}
+
+.restPrice{
+    position: absolute;
+    top: 55px;
+    left: 5px;
+}
+
+.restOpen{
+    position: absolute;
+    top: 75px;
+    left: 5px;
+}
+
+.restHours{
+    position: absolute;
+    top: 95px;
+    left: 5px;
+}
+
+.restAddress{
+    position: absolute;
+    top: 115px;
+    left: 5px;
+}
+
+.restPhone{
+    position: absolute;
+    top: 135px;
+    left: 5px;
+}
+
+.restYelp{
+    position: absolute;
+    top: 200px;
+    left: 60px;
+}
+
+.review{
+    position: absolute;
+    top:550px;
+    left: 20%;
+    height: 150px;
+    width: 50%;
+    background-color: #BDBDBD;
+    border: 2px solid #000;
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}

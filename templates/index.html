@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <div class="container" id="myHeader">
+<head>
+    <meta charset="UTF-8"> <meta name=viewport" content="width=device-width, initial-scale-1.0">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+          rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/Home_style.css">
+
+    <div class="logo-box">
+        <a href="/">
+            <img src="http://www.stevens.edu/news/newspoints/brand-logos/Stevens-ducks-mascott-Attila.png">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+        </ul>
+    </nav>
+</head>
+</div>
+</header>
+<body>
+<!--Slider Starts-->
+<slider>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+</slider>
+<style>
+    form{
+        margin: auto;
+        margin-top: 220px;
+        align: center;
+    }
+
+</style>
+
+<form action="/search" method="post">
+    <div class="rectangle">
+        <p><strong>Welcome to DuckDash! We want to help you pick the perfect place to eat with the many options that Hoboken has to offer!</strong></p><br><br>
+    <div class="rectangle2">
+        <div class="form1">
+            <p><strong>Please fill out any category below to narrow</strong></p>
+            <br></br><i>Place:</i><br>
+    <input type="text" name="place" size="30" class="search" id="place_name" placeholder="Search Hoboken Resturants"><br>
+            <br><i>Food Type:</i><br>
+    <input type="text" name="food" size="30" class="search" id="food_group" placeholder="Search for any type of food"><br>
+            <br><i>Radius(in meters):</i><br>
+    <input type="text" name="radius" size="30" class="search" placeholder="Search for a radius"><br>
+    </div>
+    <div class="form2">
+        <p><strong>down your search of the local area!</strong></p>
+        <br></br><i>Cost:</i><br>
+    <input type="radio" name="price" value="$">$<br>
+    <input type="radio" name="price" value="$$">$$<br>
+    <input type="radio" name="price" value="$$$">$$$<br>
+    <input type="radio" name="price" value="$$$$">$$$$<br>
+        <br><i>Transaction Type:</i><br>
+    <input type="radio" name="transaction" value="Delivery">Delivery<br>
+    <input type="radio" name="transaction" value="Pickup">Pickup<br>
+    <br>
+    <input type="submit" value="submit">
+    </div>
+</div>
+</div>
+    <div class="hoboken">
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="800" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=hoboken&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>Google Maps Generator by <a href="https://www.embedgooglemap.net">embedgooglemap.net</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:500px;}</style></div>
+    </div>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
